@@ -7,7 +7,7 @@ import FloatingCodeSnippet from "./FloatingCodeSnippet";
 const lines = [
   "> auth.staff('christian_veneracion')",
   "> status: online — accepting new roles",
-  "> stack: PHP · MySQL · JavaScript · Tailwind",
+  "> stack: Next.js · PHP · MySQL · Tailwind",
 ];
 
 function TypedLog() {
@@ -76,13 +76,13 @@ export default function Hero() {
         <div className="mt-9 flex flex-wrap items-center gap-4">
           <a
             href="#work"
-            className="px-6 py-3 bg-brass text-ink font-mono text-xs tracking-widest uppercase hover:bg-brass-soft transition-colors"
+            className="px-6 py-3 bg-azure text-ink font-mono text-xs tracking-widest uppercase hover:bg-azure-soft transition-colors"
           >
             View the work
           </a>
           <a
             href="#contact"
-            className="px-6 py-3 border border-ink-line text-paper font-mono text-xs tracking-widest uppercase hover:border-brass hover:text-brass transition-colors"
+            className="px-6 py-3 border border-ink-line text-paper font-mono text-xs tracking-widest uppercase hover:border-azure hover:text-azure transition-colors"
           >
             Get in touch
           </a>

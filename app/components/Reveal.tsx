@@ -19,7 +19,7 @@ export default function Reveal({
     <motion.div
       initial={{ opacity: 0, y: 36, scale: 0.985 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: false, amount: 0.2, margin: "-80px" }}
       transition={{
         type: "spring",
         stiffness: 90,
@@ -33,9 +33,9 @@ export default function Reveal({
         <motion.span
           initial={{ opacity: 0.9 }}
           whileInView={{ opacity: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.9, delay: delay + 0.3 }}
-          className="pointer-events-none absolute -inset-3 border border-brass/40"
+          className="pointer-events-none absolute -inset-3 border border-azure/40"
         />
       )}
       {children}

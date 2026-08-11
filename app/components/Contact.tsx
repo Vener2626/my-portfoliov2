@@ -8,7 +8,7 @@ export default function Contact() {
       className="px-6 sm:px-14 py-28 max-w-3xl border-t border-ink-line mt-10"
     >
       <Reveal>
-        <span className="stamp mb-6">Entry 006 — Contact</span>
+        <span className="stamp mb-6">Entry 007 — Contact</span>
       </Reveal>
       <Reveal delay={0.05}>
         <h2 className="font-display text-3xl sm:text-4xl text-paper mb-6 text-balance">
@@ -27,14 +27,14 @@ export default function Contact() {
         <div className="flex flex-wrap gap-4">
           <a
             href="mailto:christianveneracion.basc@gmail.com"
-            className="flex items-center gap-2 px-6 py-3 bg-brass text-ink font-mono text-xs tracking-widest uppercase hover:bg-brass-soft transition-colors"
+            className="flex items-center gap-2 px-6 py-3 bg-azure text-ink font-mono text-xs tracking-widest uppercase hover:bg-azure-soft transition-colors"
           >
             <Mail size={15} /> Email me
           </a>
           <a
             href="/Christian_Veneracion_Resume.pdf"
             download
-            className="flex items-center gap-2 px-6 py-3 border border-ink-line text-paper font-mono text-xs tracking-widest uppercase hover:border-brass hover:text-brass transition-colors"
+            className="flex items-center gap-2 px-6 py-3 border border-ink-line text-paper font-mono text-xs tracking-widest uppercase hover:border-azure hover:text-azure transition-colors"
           >
             <Download size={15} /> Download CV
           </a>
@@ -48,7 +48,7 @@ export default function Contact() {
               href="https://github.com/vener2626"
               target="_blank"
               rel="noreferrer"
-              className="text-paper-dim hover:text-brass transition-colors"
+              className="text-paper-dim hover:text-azure transition-colors"
               aria-label="GitHub"
             >
               <Github size={18} />
@@ -57,7 +57,7 @@ export default function Contact() {
               href="https://www.facebook.com/Ven333r"
               target="_blank"
               rel="noreferrer"
-              className="text-paper-dim hover:text-brass transition-colors"
+              className="text-paper-dim hover:text-azure transition-colors"
               aria-label="Facebook"
             >
               <Facebook size={18} />

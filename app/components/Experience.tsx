@@ -27,7 +27,7 @@ export default function Experience() {
   return (
     <section id="experience" className="px-6 sm:px-14 py-28 max-w-3xl">
       <Reveal>
-        <span className="stamp mb-6">Entry 003 — Experience</span>
+        <span className="stamp mb-6">Entry 004 — Experience</span>
       </Reveal>
       <Reveal delay={0.05}>
         <h2 className="font-display text-3xl sm:text-4xl text-paper mb-12">
@@ -39,7 +39,7 @@ export default function Experience() {
         {roles.map((role, i) => (
           <Reveal key={role.title + role.period} delay={0.08 * i} frame>
             <div className="grid sm:grid-cols-[140px_1fr] gap-3 sm:gap-8 ledger-rule pt-6">
-              <div className="font-mono text-xs text-brass tracking-wide">
+              <div className="font-mono text-xs text-azure tracking-wide">
                 {role.period}
               </div>
               <div>
@@ -56,7 +56,7 @@ export default function Experience() {
                   {role.points.map((p) => (
                     <li
                       key={p}
-                      className="text-paper-dim text-sm leading-relaxed pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-brass"
+                      className="text-paper-dim text-sm leading-relaxed pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-azure"
                     >
                       {p}
                     </li>

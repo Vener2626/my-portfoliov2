@@ -15,10 +15,10 @@ const config: Config = {
           dim: "#A9A69C",
           faint: "#6F6C64",
         },
-        brass: {
-          DEFAULT: "#C9A24C",
-          soft: "#E3C983",
-          deep: "#8F6F2E",
+        azure: {
+          DEFAULT: "#4E8FD1",
+          soft: "#83B8E8",
+          deep: "#1C3B5A",
         },
       },
       fontFamily: {

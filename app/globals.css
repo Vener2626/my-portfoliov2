@@ -21,7 +21,7 @@ body {
 }
 
 ::selection {
-  background: #C9A24C;
+  background: #4E8FD1;
   color: #14171C;
 }
 
@@ -34,8 +34,8 @@ body {
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #C9A24C;
-  border: 1px solid rgba(201, 162, 76, 0.35);
+  color: #4E8FD1;
+  border: 1px solid rgba(78, 143, 209, 0.35);
   padding: 0.3rem 0.7rem;
   border-radius: 2px;
   transform: rotate(-1deg);
@@ -52,7 +52,7 @@ body {
   position: absolute;
   width: 14px;
   height: 14px;
-  border-color: #C9A24C;
+  border-color: #4E8FD1;
   opacity: 0.6;
 }
 .scan-corner::before {
@@ -79,7 +79,7 @@ body {
 .cursor-blink::after {
   content: "▍";
   animation: blink 1s step-start infinite;
-  color: #C9A24C;
+  color: #4E8FD1;
 }
 
 @keyframes blink {

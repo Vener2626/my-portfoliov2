@@ -17,6 +17,26 @@ const projects = [
     linkLabel: "Visit Client Site",
   },
   {
+    title: "Chata Brews POS",
+    subtitle: "POS & Inventory System",
+    tag: "Personal Project — Full-Stack",
+    desc: "A comprehensive, modern POS and inventory solution with real-time data analytics, role-based security, and full data export for reporting.",
+    stack: ["PHP", "MySQL", "Chart.js", "Data Export"],
+    img: "https://vener2626.github.io/my-portfolio/image/chata.png",
+    link: null,
+    linkLabel: null,
+  },
+  {
+    title: "Ven Villas",
+    subtitle: "Luxury Villa Booking & AI Concierge",
+    tag: "Client Project — Live",
+    desc: "A deployed booking site for a luxury villa rental brand, built around a multi-step reservation flow and an AI-styled concierge chat widget for guest inquiries.",
+    stack: ["Tailwind CSS", "JavaScript"],
+    img: "https://vener2626.github.io/my-portfolio/image/venvillas-hero.png",
+    link: null,
+    linkLabel: null,
+  },
+  {
     title: "VenOS",
     subtitle: "Point-of-Sale for One-Counter Shops",
     tag: "Personal Project — Live Demo",
@@ -42,7 +62,7 @@ export default function Projects() {
   return (
     <section id="work" className="px-6 sm:px-14 py-28 max-w-4xl">
       <Reveal>
-        <span className="stamp mb-6">Entry 005 — Selected Work</span>
+        <span className="stamp mb-6">Entry 006 — Selected Work</span>
       </Reveal>
       <Reveal delay={0.05}>
         <h2 className="font-display text-3xl sm:text-4xl text-paper mb-4">
@@ -77,7 +97,7 @@ export default function Projects() {
 
               <div>
                 <div className="flex items-center gap-3 mb-2">
-                  <span className="font-mono text-[0.65rem] uppercase tracking-widest text-brass">
+                  <span className="font-mono text-[0.65rem] uppercase tracking-widest text-azure">
                     {p.tag}
                   </span>
                 </div>
@@ -103,7 +123,7 @@ export default function Projects() {
                     href={p.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-brass hover:text-brass-soft transition-colors"
+                    className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-azure hover:text-azure-soft transition-colors"
                   >
                     {p.linkLabel}
                     <ArrowUpRight
@@ -117,6 +137,20 @@ export default function Projects() {
           </Reveal>
         ))}
       </div>
+
+      <Reveal delay={0.08 * projects.length + 0.05}>
+        <div className="mt-6 flex justify-start">
+          <a
+            href="https://github.com/vener2626?tab=repositories"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-ink-line text-paper font-mono text-xs tracking-widest uppercase hover:border-azure hover:text-azure transition-colors"
+          >
+            See more projects
+            <ArrowUpRight size={14} />
+          </a>
+        </div>
+      </Reveal>
     </section>
   );
 }

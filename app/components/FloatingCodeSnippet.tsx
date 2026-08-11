@@ -49,7 +49,7 @@ export default function FloatingCodeSnippet() {
       <div className="flex items-center gap-1.5 px-4 py-2.5 border-b border-ink-line">
         <span className="w-2.5 h-2.5 rounded-full bg-paper-faint/40" />
         <span className="w-2.5 h-2.5 rounded-full bg-paper-faint/40" />
-        <span className="w-2.5 h-2.5 rounded-full bg-brass/60" />
+        <span className="w-2.5 h-2.5 rounded-full bg-azure/60" />
         <span className="ml-2 font-mono text-[0.6rem] text-paper-faint tracking-wide">
           profile.js
         </span>
