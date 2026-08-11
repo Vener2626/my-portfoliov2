@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #14171C;
+  color: #EDEAE3;
+}
+
+::selection {
+  background: #C9A24C;
+  color: #14171C;
+}
+
+/* Ledger stamp — used for section labels */
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-jbmono), monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #C9A24C;
+  border: 1px solid rgba(201, 162, 76, 0.35);
+  padding: 0.3rem 0.7rem;
+  border-radius: 2px;
+  transform: rotate(-1deg);
+  width: fit-content;
+}
+
+/* Corner brackets, like a viewfinder / QR scan target */
+.scan-corner {
+  position: relative;
+}
+.scan-corner::before,
+.scan-corner::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: #C9A24C;
+  opacity: 0.6;
+}
+.scan-corner::before {
+  top: -6px;
+  left: -6px;
+  border-top: 1.5px solid;
+  border-left: 1.5px solid;
+}
+.scan-corner::after {
+  bottom: -6px;
+  right: -6px;
+  border-bottom: 1.5px solid;
+  border-right: 1.5px solid;
+}
+
+.ledger-rule {
+  border-top: 1px dashed rgba(169, 166, 156, 0.25);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.cursor-blink::after {
+  content: "▍";
+  animation: blink 1s step-start infinite;
+  color: #C9A24C;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
