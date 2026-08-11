@@ -5,14 +5,14 @@ const roles = [
     period: "Jul 2026 — Present",
     title: "Software Developer & IT Admin",
     org: "Panrama Technologies Enterprises",
-    tag: "Full-time",
+    tag: "Employed",
     points: [
       "Maintain MOMOCart in production across 6 branches — auditing staff-entered records and fixing discrepancies.",
       "Serve as IT Admin: oversee staff use of the system and issue policy memos to protect data accuracy.",
     ],
   },
   {
-    period: "Feb 2026 — Jul 2026",
+    period: "Feb 2026 — May 2026",
     title: "Software Developer (OJT)",
     org: "Panrama Technologies Enterprises",
     tag: "On-the-job training",
@@ -37,7 +37,7 @@ export default function Experience() {
 
       <div className="space-y-10">
         {roles.map((role, i) => (
-          <Reveal key={role.title + role.period} delay={0.08 * i}>
+          <Reveal key={role.title + role.period} delay={0.08 * i} frame>
             <div className="grid sm:grid-cols-[140px_1fr] gap-3 sm:gap-8 ledger-rule pt-6">
               <div className="font-mono text-xs text-brass tracking-wide">
                 {role.period}

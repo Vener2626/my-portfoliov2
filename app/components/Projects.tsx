@@ -9,34 +9,22 @@ const projects = [
   {
     title: "MOMOCart",
     subtitle: "QR Rental, Attendance & Sales System",
-    tag: "Client work — live since May 2026",
+    tag: "Paid Client — Live",
     desc: "Centralized digital logbook for a mobility-cart rental business across 6 branches: QR-based registration, selfie-verified attendance, real-time AJAX updates, and CSV/Excel/PDF exports.",
     stack: ["PHP", "MySQL", "AJAX", "Figma"],
     img: "https://vener2626.github.io/my-portfolio/image/momocart-landing.png",
-  },
-  {
-    title: "Chata Brews",
-    subtitle: "POS & Inventory System",
-    tag: "Full-stack",
-    desc: "A modern point-of-sale and inventory solution with real-time analytics and role-based security for a retail counter operation.",
-    stack: ["PHP", "Chart.js", "MySQL"],
-    img: "https://vener2626.github.io/my-portfolio/image/chata.png",
-  },
-  {
-    title: "Ven Villas",
-    subtitle: "Luxury Villa Booking & AI Concierge",
-    tag: "Live",
-    desc: "A booking site for a luxury villa rental brand with a multi-step reservation flow and an AI-styled concierge chat widget.",
-    stack: ["Tailwind CSS", "JavaScript"],
-    img: "https://vener2626.github.io/my-portfolio/image/venvillas-hero.png",
+    link: "https://momocartheadoffice.com/",
+    linkLabel: "Visit Client Site",
   },
   {
     title: "VenOS",
     subtitle: "Point-of-Sale for One-Counter Shops",
-    tag: "Personal project — live demo",
+    tag: "Personal Project — Live Demo",
     desc: "Full-stack POS built for small single-counter businesses: fast checkout, a live sales dashboard, and PIN-protected access.",
     stack: ["Tailwind CSS", "PHP", "MySQL"],
     img: "https://vener2626.github.io/my-portfolio/image/venos-landing.png",
+    link: "https://venpos.vercel.app/",
+    linkLabel: "View Live Demo",
   },
   {
     title: "Plotease",
@@ -45,6 +33,8 @@ const projects = [
     desc: "A team system that auto-generates conflict-free faculty, room, and section schedules. Led research, wireframing, and Figma-to-code handoff.",
     stack: ["Figma", "Wireframing", "Team Project"],
     img: "https://vener2626.github.io/my-portfolio/image/plotease.png",
+    link: null,
+    linkLabel: null,
   },
 ];
 
@@ -66,17 +56,15 @@ export default function Projects() {
 
       <div className="flex flex-col gap-16">
         {projects.map((p, i) => (
-          <Reveal key={p.title} delay={0.08 * i}>
-            <motion.a
-              href="#"
-              onClick={(e) => e.preventDefault()}
+          <Reveal key={p.title} delay={0.08 * i} frame>
+            <motion.div
               whileHover="hover"
-              className="group grid sm:grid-cols-[1fr_1.3fr] gap-6 sm:gap-10 items-center cursor-default"
+              className="group grid sm:grid-cols-[1fr_1.3fr] gap-6 sm:gap-10 items-center"
             >
               <motion.div
                 variants={{ hover: { scale: 1.02 } }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className="relative aspect-[4/3] overflow-hidden border border-ink-line bg-ink-soft scan-corner"
+                className="relative aspect-[4/3] overflow-hidden border border-ink-line bg-ink-soft"
               >
                 <Image
                   src={p.img}
@@ -93,18 +81,14 @@ export default function Projects() {
                     {p.tag}
                   </span>
                 </div>
-                <h3 className="font-display text-2xl text-paper flex items-center gap-2">
+                <h3 className="font-display text-2xl text-paper">
                   {p.title}
-                  <ArrowUpRight
-                    size={18}
-                    className="text-brass opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all"
-                  />
                 </h3>
                 <p className="text-sm text-paper-dim mb-3">{p.subtitle}</p>
                 <p className="text-paper-dim text-sm leading-relaxed mb-4">
                   {p.desc}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {p.stack.map((s) => (
                     <span
                       key={s}
@@ -114,8 +98,22 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
+                {p.link && (
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-brass hover:text-brass-soft transition-colors"
+                  >
+                    {p.linkLabel}
+                    <ArrowUpRight
+                      size={14}
+                      className="-translate-x-0.5 group-hover:translate-x-0 transition-transform"
+                    />
+                  </a>
+                )}
               </div>
-            </motion.a>
+            </motion.div>
           </Reveal>
         ))}
       </div>

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import FloatingCodeSnippet from "./FloatingCodeSnippet";
 
 const lines = [
   "> auth.staff('christian_veneracion')",
@@ -51,14 +52,15 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col justify-center px-6 sm:px-14 pt-24 lg:pt-0"
+      className="relative min-h-screen flex flex-col justify-center px-6 sm:px-14 pt-24 lg:pt-0 overflow-hidden"
     >
+      <FloatingCodeSnippet />
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
       >
-        <span className="stamp mb-6">Entry 001 — Fresh Grad, July 2026</span>
+        <span className="stamp mb-6">Entry 001 — Software Developer</span>
 
         <h1 className="font-display text-balance text-[2.6rem] sm:text-6xl lg:text-[4.2rem] leading-[1.05] text-paper max-w-3xl">
           I build the systems that run behind the counter.

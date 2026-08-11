@@ -6,7 +6,7 @@ export default function About() {
       <Reveal>
         <span className="stamp mb-6">Entry 002 — About</span>
       </Reveal>
-      <Reveal delay={0.05}>
+      <Reveal delay={0.05} frame>
         <h2 className="font-display text-3xl sm:text-4xl text-paper mb-8">
           From San Ildefonso, Bulacan — building for people who use software
           at work, not just for fun.
